@@ -1061,8 +1061,8 @@ window_realize_cb(GtkWidget *widget, gpointer user_data)
     {
         if ( VNR_WINDOW(widget)->prefs->start_maximized ) {
             vnr_window_open(VNR_WINDOW(widget), FALSE);
-        } 
-        else 
+        }
+        else
         {
             GdkScreen *screen;
             GdkRectangle monitor;
@@ -1992,6 +1992,7 @@ vnr_window_key_press (GtkWidget *widget, GdkEventKey *event)
 
     switch(event->keyval){
         case GDK_KEY_Left:
+        case 'k':
             if (event->state & GDK_MOD1_MASK)
             {
                 vnr_window_cmd_prev (NULL, window);
@@ -2011,6 +2012,7 @@ vnr_window_key_press (GtkWidget *widget, GdkEventKey *event)
             result = TRUE;
             break;
         case GDK_KEY_Right:
+        case 'j':
             if (event->state & GDK_MOD1_MASK)
             {
                 vnr_window_cmd_next (NULL, window);

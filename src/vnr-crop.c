@@ -119,7 +119,7 @@ vnr_crop_build_dialog (VnrCrop *crop)
     width = crop->vnr_win->current_image_width;
     height = crop->vnr_win->current_image_height;
 
-    vnr_tools_fit_to_size_double(&height, &width, 400,400);
+    vnr_tools_fit_to_size_double(&height, &width, 1000,1000);
     crop->width = width;
     crop->height = height;
     crop->zoom = ( width/crop->vnr_win->current_image_width
